@@ -1,0 +1,26 @@
+{
+  "name": "mikroserwisy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently --kill-others -n api,auth,todos -c red,green,blue \"npm run start-api\" \"npm run start-auth\" \"npm run start-todos\"",
+    "start-api": "cd packages/api && npm run start:dev",
+    "start-auth": "cd packages/auth && npm run start:dev",
+    "start-todos": "cd packages/todos && npm run start:dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mielczynski/mikroserwisy.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mielczynski/mikroserwisy/issues"
+  },
+  "homepage": "https://github.com/mielczynski/mikroserwisy#readme",
+  "devDependencies": {
+    "concurrently": "^5.3.0"
+  }
+}
